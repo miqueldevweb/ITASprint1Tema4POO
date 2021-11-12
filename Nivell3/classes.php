@@ -14,7 +14,7 @@ class Acount{
         $this->surnameSecond = $surnameSecond;
         $this->founds = $founds;
     }
-    //Getters/Setters nomes te sentit fer getter/setter pel saldo del compta
+    //Getters/Setters
     public function getFounds(){
         return $this->founds;
     }
