@@ -21,7 +21,7 @@
 
     <div class="formulari">
         <form action="procesa.php" method="post">
-            <input type="text" name="amount" placeholder="Introdueix la quantitat desitjada">
+            <input type="number" name="amount" required min="0" placeholder="Introdueix la quantitat desitjada">
             <select name="options">
                 <option value="ingresa">Ingressa</option>
                 <option value="retira">Reintegra</option>
