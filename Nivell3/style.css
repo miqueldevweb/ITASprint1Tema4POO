@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Londrina+Solid:wght@300&display=swap');
+
+:root{
+    --banner:'Dancing Script', cursive;
+    --text: 'Londrina Solid', cursive;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -6,19 +13,20 @@
 body {
     min-width: 100vw;
     background-color: burlywood;
-    overflow: hidden;
+    overflow-x: hidden;
+    font-family: var(--text);
+    letter-spacing: 0.2rem;
 }
 
 header {
-    background-image: url(./img/logo.png);
-    background-repeat: no-repeat;
-    background-size: 10%;
-    background-position: center;
     text-align: center;
-    padding-top: 10rem;
     color: white;
     text-transform: uppercase;
     min-width: 100vw;
+}
+
+.background img{
+    max-width: 12rem;
 }
 
 .text {
@@ -27,7 +35,95 @@ header {
     padding: 2rem 0 2rem 0;
 }
 .formulari {
-    min-width: 400px;
-    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+button, input, select{
+    font-family: inherit;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+select {
+    margin-top: .5rem;
+}
+
+input{
+    padding: 0.2rem;
+    border: none;
+    width: 100%;
+}
+
+button{
+    display: block;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 0.5rem;
+    max-width: 9rem;
+    margin: 20px auto 20px auto;
+    color: white;        
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+    box-shadow: none;
+    border: none;
+    transition: .2s ease-in;
+}
+
+button:hover{
+    transform: scale(1.05);
+    background-color: yellowgreen;
+}
+
+
+
+.banner {
+    margin-top: 2rem;
+    text-align: center;
+    color: tomato;
+    position: relative;
+}
+
+.banner img{
+    max-width: 16rem;
+}
+
+.claim {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 20px;
+    font-family: var(--banner);
+}
+
+.resultat{
+    color: white;
+    text-align: center;
+}
+
+.retorna {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 0.5rem;
+    max-width: 9rem;
+    margin: 20px auto 20px auto;
+    color: white;        
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: .2s ease-in;
+}
+
+.retorna:hover{
+    transform: scale(1.1);
+    background-color: yellowgreen;
 }
 

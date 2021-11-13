@@ -43,7 +43,7 @@ class Acount{
             case "retira":
                 $this->withdraw($amount);
         }
-        echo $this->founds;
+        return $this->founds;
     }
 
 }
