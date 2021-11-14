@@ -29,7 +29,7 @@ class Acount{
 
     private function withdraw($amount){
         if($this->founds < $amount){
-            echo "No disposes de prou saldo";
+            echo "No disposes de prou saldo"; //-> Corregir
         }else{
             $this->founds -= $amount;
         }
@@ -45,6 +45,5 @@ class Acount{
         }
         return $this->founds;
     }
-
 }
 ?>
