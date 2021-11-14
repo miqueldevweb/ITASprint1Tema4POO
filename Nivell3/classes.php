@@ -27,12 +27,15 @@ class Acount{
         $this->founds += $amount;
     }
 
-    private function withdraw($amount){
+    public function withdraw($amount){
+        $check = FALSE;
         if($this->founds < $amount){
-            echo "No disposes de prou saldo"; //-> Corregir
+            $check = FALSE;
         }else{
             $this->founds -= $amount;
+            $check = TRUE;
         }
+        return $check;
     }
 
     public function selection($option,$amount){

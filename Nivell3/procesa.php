@@ -3,6 +3,7 @@ require_once "main.php";
 $amount = $_POST['amount'];
 $option = $_POST['options'];
 $saldoActual = $client->selection($option,$amount);
+$check = $client->withdraw($amount);
 ?>
 
 <!DOCTYPE html>
@@ -25,10 +26,17 @@ $saldoActual = $client->selection($option,$amount);
             <img src="./img/logo.png" alt="senyor sense diners">
         </div>
     </header>
-
+    <!-- Carrega dinamica del resultat -->
     <div class="resultat">
-        <h2>Operació realitzada amb èxit. El teu saldo actual és de <?php echo $saldoActual ?> grams de cacau.</h2>
+        <?php
+        if($check){
+            ?>
+            <h2>Operació realitzada amb èxit. El teu saldo actual és de <?php echo $saldoActual ?> grams de cacau.</h2>
+            <?php }else{
+                ?> <h2>Ho sentim però no disposes de bastant cacau.</h2>
+            <?php } ?>        
     </div>
+    <!-- Fi de carrega dinamica -->
 
     
     <a class="retorna" href="./index.php">Nova operació</a>
